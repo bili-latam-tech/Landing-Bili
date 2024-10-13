@@ -11,21 +11,21 @@ body {
     background: radial-gradient(40.73% 31.04% at 69.51% 54.93%, #2C6ACF 0%, #FFF 100%);
     font-family: 'DM Sans', sans-serif;
     display: flex;
-    flex-direction: column; /* Ajusta el cuerpo a una columna para alinear el contenido verticalmente */
+    flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
+    font-size: 16px; /* Base font size for the entire document */
 }
 
 .header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
 }
 
 .logo {
-    margin-right: auto; /* Empuja el logo hacia la izquierda */
-    width: 200px;
+    margin-right: auto; /* Push the logo to the left */
+    width: 25%;
 }
 
 .container {
@@ -35,20 +35,18 @@ body {
     grid-template-areas: 
         "content-wrapper phone"
         "content-wrapper phone";
-    gap: 20px;
+    gap: 2rem; /* 20px gap */
     width: 100vw;
-    flex: 1; /* Hace que el contenedor ocupe todo el espacio vertical restante */
+    flex: 1; /* Makes the container fill the vertical space */
 }
-
-
 
 .content-wrapper {
     grid-area: content-wrapper;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinea el contenido arriba */
+    justify-content: flex-start; /* Align content to the top */
     align-items: flex-start;
-    padding-left: 9%;
+    padding-left: 5.625rem; /* 90px padding */
 }
 
 .content {
@@ -56,109 +54,106 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 1.25rem; /* 20px gap */
     width: 100%;
 }
 
 .content h1 {
     color: #2C6ACF;
     font-family: 'Poppins', sans-serif;
-    font-size: 3em;
+    font-size: 8rem;
     font-weight: 700;
-    padding-top: 9%;
+    padding-top: 5.625rem; /* 90px top padding */
 }
 
 .content p {
     color: #2D2B2E;
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.5em;
+    font-size: 5rem;
     font-weight: 400;
 }
 
 .signup {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem; /* 10px gap */
     align-items: flex-start;
-    position: relative; 
-    padding-top: 4.5%;
+    position: relative;
+    padding-top: 2.8125rem; /* 45px top padding */
 }
 
 .signup h2 {
     color: #4338CA;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.75em;
+    font-size: 4rem;
     font-weight: 400;
+}
+
+.signup h3 {
+    font-size: 3rem;
 }
 
 .signup .input-container {
     display: flex;
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem; /* 400px max-width */
     position: relative;
 }
 
 .signup input {
-    padding: 10px;
-    font-size: 1em;
+    padding: 0.625rem; /* 10px padding */
+    font-size: 3rem;
     flex-grow: 1;
     border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0.25rem 0 0 0.25rem; /* 4px rounded corners */
     z-index: 1;
 }
 
 .signup button {
-    padding: 11px 20px;
-    font-size: 1em;
+    padding: 0.6875rem 1.25rem; /* 11px top/bottom and 20px left/right */
+    font-size: 3rem;
     background: #2C6ACF;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0.25rem 0.25rem 0; /* 4px rounded corners */
     z-index: 2;
 }
+
 .download-buttons {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem; /* 10px gap */
     justify-content: flex-start;
-    margin-top: 2%;
-    
+    margin-top: 1.25rem; /* 20px top margin */
 }
 
 .button {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
+    gap: 0.625rem; /* 10px gap */
+    padding: 0.625rem 1.25rem; /* 10px top/bottom and 20px left/right */
     text-decoration: none;
     color: black;
-    
-    flex-shrink: 0;
-    border-radius: 5.815px;
-    border: 2.907px solid #FFF;
+    border-radius: 0.375rem; /* 6px rounded corners */
+    border: 0.1875rem solid #FFF; /* 3px border */
     background: #FFF;
-    box-shadow: 0px 47.973px 74.14px 0px rgba(0, 0, 0, 0.08), 0px 14.462px 22.351px 0px rgba(0, 0, 0, 0.06), 0px 6.007px 9.283px 0px rgba(0, 0, 0, 0.04), 0px 2.173px 3.358px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 3rem 4.625rem rgba(0, 0, 0, 0.08), 
+                0 0.9375rem 1.375rem rgba(0, 0, 0, 0.06), 
+                0 0.375rem 0.578125rem rgba(0, 0, 0, 0.04), 
+                0 0.135rem 0.208rem rgba(0, 0, 0, 0.03);
 }
 
 .button img {
-    height: 30px;
+    height: 1.875rem; /* 30px height */
 }
 
 .button span {
-    color: var(--bili6, #DB2777);
+    color: var(--bili6, #2D2B2E);
     font-family: Poppins;
     font-style: normal;
     letter-spacing: 0.052px;
-    font-size: 14px;
+    font-size: 2rem;
     line-height: 1.2;
-}
-
-.button.google-play span {
-    color: #000; /* You can adjust the color if needed */
-}
-
-.button.app-store span {
-    color: #000; /* You can adjust the color if needed */
 }
 
 .phone {
@@ -174,4 +169,33 @@ body {
     max-width: none;
     height: auto;
     object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: block; /* Switch to block layout for mobile */
+    }
+
+    .content-wrapper {
+        order: 1;
+        padding-left: 1.25rem; /* 20px left padding */
+        padding-right: 1.25rem; /* 20px right padding */
+    }
+
+    .phone {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.25rem; /* 20px top margin */
+    }
+
+    .phone-image {
+        max-width: 80%; /* Adjust phone image size for mobile */
+        height: auto;
+    }
+
+    .signup, .download-buttons {
+        order: 3;
+        margin-top: 1.25rem; /* 20px top margin */
+    }
 }
