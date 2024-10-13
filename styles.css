@@ -35,7 +35,7 @@ body {
     grid-template-areas: 
         "content-wrapper phone"
         "content-wrapper phone";
-    gap: 2rem; /* 20px gap */
+    gap: 1.25rem; /* 20px gap */
     width: 100vw;
     flex: 1; /* Makes the container fill the vertical space */
 }
@@ -61,7 +61,7 @@ body {
 .content h1 {
     color: #2C6ACF;
     font-family: 'Poppins', sans-serif;
-    font-size: 8rem;
+    font-size: 3rem;
     font-weight: 700;
     padding-top: 5.625rem; /* 90px top padding */
 }
@@ -69,7 +69,7 @@ body {
 .content p {
     color: #2D2B2E;
     font-family: 'DM Sans', sans-serif;
-    font-size: 5rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -85,12 +85,12 @@ body {
 .signup h2 {
     color: #4338CA;
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 400;
 }
 
 .signup h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .signup .input-container {
@@ -102,7 +102,7 @@ body {
 
 .signup input {
     padding: 0.625rem; /* 10px padding */
-    font-size: 3rem;
+    font-size: 1rem;
     flex-grow: 1;
     border: 1px solid #ccc;
     border-radius: 0.25rem 0 0 0.25rem; /* 4px rounded corners */
@@ -111,7 +111,7 @@ body {
 
 .signup button {
     padding: 0.6875rem 1.25rem; /* 11px top/bottom and 20px left/right */
-    font-size: 3rem;
+    font-size: 1rem;
     background: #2C6ACF;
     color: white;
     border: none;
@@ -148,11 +148,11 @@ body {
 }
 
 .button span {
-    color: var(--bili6, #2D2B2E);
+    color: var(--bili6, #DB2777);
     font-family: Poppins;
     font-style: normal;
     letter-spacing: 0.052px;
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 1.2;
 }
 
