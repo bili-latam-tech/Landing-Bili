@@ -31,12 +31,10 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "content-wrapper phone"
         "content-wrapper phone";
-    width: 100vw;
-    flex: 1; /* Makes the container fill the vertical space */
+    gap: 20px;
 }
 
 .content-wrapper {
@@ -172,21 +170,30 @@ body {
 
 @media only screen and (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "content-wrapper"
-            "phone";
+        grid-template-columns: 1fr; /* Stacks content vertically */
+        grid-template-areas:
+            "content-wrapper";
     }
 
-    .content-wrapper {
-        padding-left: 5%;
+    .content {
+        display: flex;
+        flex-direction: column;
     }
-}
 
-@media only screen and (max-width: 768px) {
-    .button {
-        padding: 15px 30px;
-        font-size: 16px;
+    /* Move the .phone to be right after the <p> tag */
+    .phone {
+        order: 2; /* Makes it come after <p> in the flow */
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center; /* Center it for mobile view */
+    }
+
+    .content p {
+        order: 1; /* Ensures <p> is ordered before .phone */
+    }
+
+    h2 {
+        order: 3; /* Moves <h2> to after the .phone */
     }
 }
 
