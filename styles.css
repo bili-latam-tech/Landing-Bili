@@ -170,9 +170,9 @@ body {
 
 @media only screen and (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Stacks content vertically */
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "content-wrapper";
+            "content-wrapper"; /* Stacks all the content vertically */
     }
 
     .content {
@@ -180,20 +180,19 @@ body {
         flex-direction: column;
     }
 
-    /* Move the .phone to be right after the <p> tag */
+    /* Move .phone to appear before the <h1> tag */
     .phone {
-        order: 1; /* Makes it come after <p> in the flow */
+        order: 1; /* Appears first in the flex order */
         margin: 20px 0;
         width: 100%;
-        justify-content: center; /* Center it for mobile view */
+        justify-content: center;
     }
 
-    .content p {
-        order: 2; /* Ensures <p> is ordered before .phone */
+    h1 {
+        order: 2; /* Ensures <h1> is placed after .phone */
     }
 
-    h2 {
-        order: 3; /* Moves <h2> to after the .phone */
+    p, h2, h3 {
+        order: unset; /* Retain their normal order after <h1> */
     }
 }
-
