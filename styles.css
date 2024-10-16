@@ -171,8 +171,6 @@ body {
     .phone-image{
         display: block;
         width: 100%;
-        max-width: 300px; /* You can adjust this size */
-        margin: 10px auto; /* Center the image */
     }
 
     /* Hide the larger phone image for mobile */
@@ -181,6 +179,3 @@ body {
     }
 }
 
-.phone-image {
-    border: 2px solid red; /* Temporary: Remove once fixed */
-}
