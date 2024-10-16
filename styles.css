@@ -162,21 +162,25 @@ body {
 }
 
 
-.phone-mobile {
+.phone-image {
     display: none;
 }
 
-/* Show the phone image between the logo and the heading on mobile devices */
+/* Show phone image on mobile devices (width ≤ 768px) */
 @media only screen and (max-width: 768px) {
-    .phone-mobile {
+    .phone-image{
         display: block;
         width: 100%;
-        max-width: 300px; /* Adjust the size as needed */
-        margin: 10px auto; /* Center the image with some spacing */
+        max-width: 300px; /* You can adjust this size */
+        margin: 10px auto; /* Center the image */
     }
 
-    /* Hide the larger phone image in the `.phone` container on mobile */
+    /* Hide the larger phone image for mobile */
     .phone {
         display: none;
     }
+}
+
+.phone-image {
+    border: 2px solid red; /* Temporary: Remove once fixed */
 }
