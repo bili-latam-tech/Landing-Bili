@@ -161,18 +161,22 @@ body {
     height: 100%;
 }
 
-.phone-image {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    object-fit: contain;
+
+.phone-mobile {
+    display: none;
 }
 
+/* Show the phone image between the logo and the heading on mobile devices */
 @media only screen and (max-width: 768px) {
     .phone-mobile {
         display: block;
         width: 100%;
-        max-width: 300px; /* Adjust the size based on your needs */
+        max-width: 300px; /* Adjust the size as needed */
+        margin: 10px auto; /* Center the image with some spacing */
     }
 
+    /* Hide the larger phone image in the `.phone` container on mobile */
+    .phone {
+        display: none;
+    }
 }
