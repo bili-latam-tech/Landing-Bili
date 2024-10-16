@@ -177,3 +177,29 @@ body {
         display: none;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    /* Adjust the container to remove the white gap and reduce the left margin */
+    .container, .content-wrapper, .content {
+        width: 100vw; /* Ensures full width of the viewport */
+        padding: 0;    /* Remove padding that might be adding extra space */
+        margin: 0 auto; /* Center content */
+        overflow-x: hidden; /* Prevent horizontal scrolling due to overflow */
+    }
+
+    /* Ensure image width and content adjust properly */
+    .phone-mobile {
+        width: 90%;    /* Adjust the width of the phone image */
+        margin: 10px auto; /* Center the image with reduced margins */
+    }
+
+    /* Reduce left margin for text content */
+    .content-wrapper {
+        padding-left: 5%; /* Reduce the left padding/margin */
+    }
+
+    /* Make sure the content doesn't extend beyond screen width */
+    body {
+        overflow-x: hidden; /* Prevent any horizontal overflow */
+    }
+}
