@@ -20,7 +20,6 @@ body {
 /* Apply the gradient directly to the phone image's container */
 .header {
     position: relative; /* Allows gradient and image layering */
-    text-align: center; /* Center the content */
     padding: 50px 0;
 }
 
@@ -30,7 +29,6 @@ body {
     background-size: 200% 150%; /* Make the gradient more of an oval shape */
     background-position: 50% 20%; /* Move the gradient further down */
     padding: 20px 0;
-    text-align: center; /* Center content */
 }
 
 .logo {
