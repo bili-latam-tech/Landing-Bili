@@ -60,7 +60,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    padding-top: 5.625rem; /* 90px top padding */
 }
 
 .content p {
@@ -190,7 +189,6 @@ body {
     /* Ensure image width and content adjust properly */
     .phone-mobile {
         width: 90%;    /* Adjust the width of the phone image */
-        margin: 10px auto; /* Center the image with reduced margins */
     }
 
     /* Reduce left margin for text content */
