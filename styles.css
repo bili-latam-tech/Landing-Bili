@@ -211,3 +211,24 @@ body {
         overflow-x: hidden; /* Prevent any horizontal overflow */
     }
 }
+
+@media only screen and (max-width: 768px) {
+    /* Adjust the container to ensure equal margins */
+    .content-wrapper {
+        padding-left: 5%; /* Assuming 5% is the current left margin */
+        padding-right: 5%; /* Add matching right padding */
+    }
+
+    .container, .content {
+        width: 100vw; /* Make sure the container is full width */
+        padding-left: 5%; /* Set consistent padding on the left */
+        padding-right: 5%; /* Set consistent padding on the right */
+        margin: 0 auto; /* Center content within the full-width container */
+    }
+
+    /* Ensure the phone image is also centered */
+    .phone-mobile {
+        width: 90%; /* Adjust width as needed */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+}
