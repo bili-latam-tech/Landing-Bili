@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: radial-gradient(40.73% 31.04% at 69.51% 54.93%, #2C6ACF 0%, #FFF 100%);
+    background: none; /* Or your desired background for the body */
     font-family: 'DM Sans', sans-serif;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative; /* Allows z-index usage */
+    background: radial-gradient(40.73% 31.04% at 69.51% 54.93%, #2C6ACF 0%, #FFF 100%);
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center;
 }
 
 .logo {
@@ -188,9 +192,12 @@ body {
 
     /* Ensure image width and content adjust properly */
     .phone-mobile {
-        width: 90%;    /* Adjust the width of the phone image */
+        position: relative;
+        z-index: 1; /* Brings the phone image above the background */
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
     }
-
     /* Reduce left margin for text content */
     .content-wrapper {
         padding-left: 5%; /* Reduce the left padding/margin */
