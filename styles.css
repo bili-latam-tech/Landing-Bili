@@ -174,11 +174,6 @@ body {
         display: block;
         width: 100%;
         max-width: 300px; /* Adjust the size based on your needs */
-        margin: 20px 0;   /* Add some margin for spacing */
     }
 
-    /* Hide the existing large phone image on mobile */
-    .phone {
-        display: none;
-    }
 }
