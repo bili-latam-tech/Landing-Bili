@@ -18,12 +18,13 @@ body {
 }
 
 .header {
-    position: relative; /* Allows z-index for the image */
-    background: radial-gradient(circle at center, #2C6ACF 0%, #FFF 100%);
-    background-size: 150% 150%; /* Adjust the size of the gradient */
-    background-position: top center; /* Center the gradient */
-    padding: 20px 0;
-    text-align: center; /* Center the content */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative; /* Allows z-index usage */
+    background: radial-gradient(40.73% 31.04% at 69.51% 54.93%, #2C6ACF 0%, #FFF 100%);
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center;
 }
 
 .logo {
