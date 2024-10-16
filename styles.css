@@ -182,14 +182,14 @@ body {
 
     /* Move the .phone to be right after the <p> tag */
     .phone {
-        order: 2; /* Makes it come after <p> in the flow */
+        order: 1; /* Makes it come after <p> in the flow */
         margin: 20px 0;
         width: 100%;
         justify-content: center; /* Center it for mobile view */
     }
 
     .content p {
-        order: 1; /* Ensures <p> is ordered before .phone */
+        order: 2; /* Ensures <p> is ordered before .phone */
     }
 
     h2 {
