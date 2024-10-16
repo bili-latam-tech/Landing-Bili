@@ -166,33 +166,19 @@ body {
     max-width: none;
     height: auto;
     object-fit: contain;
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "content-wrapper"; /* Stacks all the content vertically */
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Move .phone to appear before the <h1> tag */
-    .phone {
-        order: 1; /* Appears first in the flex order */
-        margin: 20px 0;
+    .phone-mobile {
+        display: block;
         width: 100%;
-        justify-content: center;
+        max-width: 300px; /* Adjust the size based on your needs */
+        margin: 20px 0;   /* Add some margin for spacing */
     }
 
-    h1 {
-        order: 2; /* Ensures <h1> is placed after .phone */
-    }
-
-    p, h2, h3 {
-        order: unset; /* Retain their normal order after <h1> */
+    /* Hide the existing large phone image on mobile */
+    .phone {
+        display: none;
     }
 }
