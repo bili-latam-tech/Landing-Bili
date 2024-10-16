@@ -197,31 +197,3 @@ body {
     }
 }
 
-@media (max-width: 767px) {
-    .container {
-        display: block; /* Switch to block layout for mobile */
-    }
-
-    .content-wrapper {
-        order: 1;
-        padding-left: 1.25rem; /* 20px left padding */
-        padding-right: 1.25rem; /* 20px right padding */
-    }
-
-    .phone {
-        order: 2;
-        display: flex;
-        justify-content: center;
-        margin-top: 1.25rem; /* 20px top margin */
-    }
-
-    .phone-image {
-        max-width: 80%; /* Adjust phone image size for mobile */
-        height: auto;
-    }
-
-    .signup, .download-buttons {
-        order: 3;
-        margin-top: 1.25rem; /* 20px top margin */
-    }
-}
