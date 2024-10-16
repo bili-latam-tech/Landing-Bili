@@ -166,14 +166,13 @@ body {
     display: none;
 }
 
-/* Show phone image on mobile devices (width ≤ 768px) */
+
 @media only screen and (max-width: 768px) {
     .phone-image{
         display: block;
         width: 100%;
     }
 
-    /* Hide the larger phone image for mobile */
     .phone {
         display: none;
     }
