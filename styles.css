@@ -166,7 +166,6 @@ body {
     max-width: none;
     height: auto;
     object-fit: contain;
-    display: none;
 }
 
 @media only screen and (max-width: 768px) {
