@@ -17,14 +17,23 @@ body {
     font-size: 16px; /* Base font size for the entire document */
 }
 
+/* Apply the gradient directly to the phone image's container */
 .header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative; /* Allows z-index usage */
-    background: radial-gradient(40.73% 31.04% at 69.51% 54.93%, #2C6ACF 0%, #FFF 100%);
-    padding: 20px 0; /* Adjust padding as needed */
-    text-align: center;
+    position: relative; /* Allows gradient and image layering */
+    text-align: center; /* Center the content */
+    padding: 50px 0;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 300px; /* Adjust based on desired size */
+    background: radial-gradient(circle at center, #2C6ACF 0%, #FFF 100%);
+    z-index: 0; /* Ensure gradient is behind the phone image */
 }
 
 .logo {
@@ -189,7 +198,6 @@ body {
         margin: 0 auto; /* Center content */
         overflow-x: hidden; /* Prevent horizontal scrolling due to overflow */
     }
-
     /* Ensure image width and content adjust properly */
     .phone-mobile {
         position: relative;
