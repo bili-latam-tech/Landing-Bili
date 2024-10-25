@@ -181,21 +181,26 @@ body {
 @media screen and (min-width: 1024px) {
     .container {
         display: grid;
-        grid-template-columns: 1.3fr 1fr; /* Adjust the first column width if necessary */
+        grid-template-columns: 1.5fr 1fr; /* Make the content column wider */
         grid-template-areas: 
-            "content-wrapper phone"; /* Phone is in the second column */
-        column-gap: 30px; /* Adjust gap between content and phone */
+            "content-wrapper phone"; /* Ensure the phone stays on the right */
+        column-gap: 40px; /* Increase the gap between content and phone */
         width: 100%;
-        align-items: center; /* Align content vertically centered */
+        align-items: start; /* Align content to the top */
     }
 
     .content-wrapper {
         grid-area: content-wrapper;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center vertically in the available space */
+        justify-content: flex-start; /* Align content to the top */
         align-items: flex-start;
-        padding-left: 5%; /* Adjust padding if needed */
+        padding-left: 5%; /* Reduce padding if needed */
+        padding-top: 20px; /* Adjust top padding */
+    }
+
+    .content-wrapper h1, .content-wrapper p {
+        margin: 0; /* Remove any potential margin */
     }
 
     .phone {
@@ -204,14 +209,15 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
-        margin: 0;
         padding: 0;
+        margin: 0;
     }
 
     .phone-image {
-        max-width: 80%; /* Adjust the size to fit the design */
+        max-width: 100%; /* Ensure it doesn't exceed the container */
         height: auto;
         object-fit: contain;
+        display: block;
     }
 }
 
