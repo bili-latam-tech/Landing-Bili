@@ -168,7 +168,14 @@ body {
     height: 100%;
 }
 
+/* Debugging borders */
+.content-wrapper {
+    border: 1px solid red; /* Temporary border to see content-wrapper area */
+}
 
+.phone {
+    border: 1px solid blue; /* Temporary border to see phone container */
+}
 
 @media only screen and (max-width: 768px) {
     .phone-image{
