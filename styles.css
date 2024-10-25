@@ -169,10 +169,6 @@ body {
 }
 
 
-.phone-image {
-    display: none;
-}
-
 
 @media only screen and (max-width: 768px) {
     .phone-image{
@@ -180,9 +176,6 @@ body {
         width: 100%;
     }
 
-    .phone {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 768px) {
