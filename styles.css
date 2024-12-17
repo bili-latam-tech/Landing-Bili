@@ -18,24 +18,27 @@ body {
     line-height: 1.6;
 }
 
-/* Main Container - Desktop */
 .container {
-    display: flex;
-    flex-direction: row; /* Horizontal alignment for desktop */
-    align-items: center;
-    justify-content: space-between; /* Push content and phone apart */
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-    padding: 4rem 2rem;
+    display: grid; /* Enable CSS Grid */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center; /* Vertically align content */
+    gap: 2rem; /* Add spacing between columns */
+    max-width: 1200px; /* Centered layout with a max width */
+    margin: 0 auto; /* Center the grid on the page */
+    padding: 4rem 2rem; /* Add padding around */ 
+    border: 2px solid red; /* Red border around the container */
+
 }
 
-/* Adjust content wrapper */
+
+
 .content-wrapper {
-    flex: 1; /* Allow content to take available space */
-    max-width: 50%; /* Limit content width */
-    text-align: left; /* Align text to the left */
-    padding-right: 2rem; /* Add spacing */
+    grid-column: 1 / 2; /* Place in the first column */
+    max-width: 100%; /* Ensure it takes full width of the column */
+    text-align: left; /* Left-align text */
+    border: 2px solid blue; /* Blue border around the content */
 }
+
 
 /* Heading and Text */
 h1 {
@@ -72,14 +75,15 @@ p {
     cursor: pointer;
 }
 
-/* Adjust phone image */
 .phone-image {
-    flex: 1; /* Allow phone image to take available space */
-    max-width: 45%; /* Limit phone image width */
-    height: auto;
-    transform: none; /* Remove rotation */
-    margin: 0; /* Remove margins */
+    grid-column: 2 / 3; /* Place in the second column */
+    max-width: 100%; /* Prevent overflow */
+    height: auto; /* Maintain aspect ratio */
+    justify-self: center; /* Horizontally center the image in its column */
+    border: 2px solid green; /* Green border around the phone image */
 }
+
+
 
 /* Download buttons alignment */
 .download-buttons {
@@ -106,22 +110,30 @@ p {
     height: 24px;
 }
 
+h1, p {
+    margin-bottom: 1.5rem; /* Add vertical spacing */
+}
+
+.download-buttons {
+    margin-top: 2rem; /* Space above buttons */
+}
+
+
 /* Responsive - Mobile View */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "content-wrapper"
-            "phone";
-        row-gap: 2rem;
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+        gap: 1.5rem; /* Adjust spacing */
     }
 
     .content-wrapper {
+        grid-column: 1 / -1; /* Take the full row */
         text-align: center; /* Center text for mobile */
     }
 
     .phone-image {
-        transform: none;
+        grid-column: 1 / -1; /* Take the full row */
+        justify-self: center; /* Center the image */
     }
 }
+
