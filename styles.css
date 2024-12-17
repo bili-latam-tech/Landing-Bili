@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.logo {
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+    width: 100px;
+}
+
 /* Body Styling */
 body {
     font-family: 'DM Sans', sans-serif;
