@@ -18,26 +18,23 @@ body {
     line-height: 1.6;
 }
 
-/* Adjust container grid */
+/* Main Container - Desktop */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Wider space for phone mockup */
-    grid-template-areas: "content-wrapper phone";
-    column-gap: 50px; /* Add gap between content and phone */
-    align-items: center; /* Align vertically to the center */
-    width: 100%;
-    max-width: 1200px; /* Control maximum width for larger screens */
-    margin: 0 auto; /* Center container */
-    padding: 2rem 1rem; /* Add padding */
+    display: flex;
+    flex-direction: row; /* Horizontal alignment for desktop */
+    align-items: center;
+    justify-content: space-between; /* Push content and phone apart */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 4rem 2rem;
 }
 
-/* Content Wrapper Adjustments */
+/* Adjust content wrapper */
 .content-wrapper {
-    grid-area: content-wrapper;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
+    flex: 1; /* Allow content to take available space */
+    max-width: 50%; /* Limit content width */
+    text-align: left; /* Align text to the left */
+    padding-right: 2rem; /* Add spacing */
 }
 
 /* Heading and Text */
@@ -75,22 +72,22 @@ p {
     cursor: pointer;
 }
 
-/* Phone Mockup Alignment */
+/* Adjust phone image */
 .phone-image {
-    grid-area: phone;
-    display: block;
-    max-width: 100%;
+    flex: 1; /* Allow phone image to take available space */
+    max-width: 45%; /* Limit phone image width */
     height: auto;
-    margin: 0 auto;
-    transform: rotate(-10deg); /* Slight rotation for the phone mockup */
+    transform: none; /* Remove rotation */
+    margin: 0; /* Remove margins */
 }
 
-/* Buttons */
+/* Download buttons alignment */
 .download-buttons {
-    margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
+
 
 .button {
     display: flex;
@@ -109,25 +106,22 @@ p {
     height: 24px;
 }
 
-/* Responsive Design */
+/* Responsive - Mobile View */
 @media only screen and (max-width: 768px) {
     .container {
+        display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "content-wrapper"
             "phone";
         row-gap: 2rem;
     }
 
+    .content-wrapper {
+        text-align: center; /* Center text for mobile */
+    }
+
     .phone-image {
         transform: none;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
     }
 }
