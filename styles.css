@@ -17,18 +17,16 @@ body {
     color: #333;
     line-height: 1.6;
 }
-.responsive{
-    display: none;
-}
+
 
 .container {
-    display: grid; /* Enable CSS Grid */
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    align-items: center; /* Vertically align content */
-    gap: 2rem; /* Add spacing between columns */
-    max-width: 1200px; /* Centered layout with a max width */
-    margin: 0 auto; /* Center the grid on the page */
-    padding: 4rem 2rem; /* Add padding around */ 
+    display: grid; /* Enable Grid */
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
     border: 2px solid red; /* Red border around the container */
 
 }
@@ -36,9 +34,8 @@ body {
 
 
 .content-wrapper {
-    grid-column: 1 / 2; /* Place in the first column */
-    max-width: 100%; /* Ensure it takes full width of the column */
-    text-align: left; /* Left-align text */
+    grid-column: 1 / 2; /* Place content in the first column */
+    max-width: 100%;
     border: 2px solid blue; /* Blue border around the content */
 }
 
@@ -79,10 +76,11 @@ p {
 }
 
 .phone-image {
-    grid-column: 2 / 3; /* Place in the second column */
-    max-width: 100%; /* Prevent overflow */
-    height: auto; /* Maintain aspect ratio */
-    justify-self: center; /* Horizontally center the image in its column */
+    grid-column: 2 / 3; /* Place image in the second column */
+    max-width: 100%;
+    height: auto;
+    justify-self: center; /* Center horizontally */
+    display: block; /* Default visibility */
     border: 2px solid green; /* Green border around the phone image */
 }
 
@@ -125,24 +123,25 @@ h1, p {
 /* Responsive - Mobile View */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Switch to a single-column layout */
-        gap: 1.5rem; /* Adjust spacing */
+        grid-template-columns: 1fr; /* Single-column layout for mobile */
+        gap: 1rem;
     }
 
     .content-wrapper {
-        grid-column: 1 / -1; /* Take the full row */
-        text-align: left; 
+        order: 3; /* Push content below the image */
     }
 
-    .responsive {
-        grid-column: 1 / -1; /* Take the full row */
+    .logo {
+        order: 1; /* Logo remains at the top */
+        margin-bottom: 1rem;
+    }
+
+    .phone-image {
+        grid-column: 1 / -1; /* Take up the full row */
         justify-self: center; /* Center the image */
-        display: block;
+        display: block; /* Ensure it's visible on mobile */
+        order: 2;
     }
-
-    .phone-image{
-        display: none;
-    }
-    
 }
+
 
