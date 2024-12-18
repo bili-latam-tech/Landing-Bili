@@ -16,8 +16,6 @@ body {
     background-color: #fff;
     color: #333;
     line-height: 1.6;
-    font-size: 2rem;
-    color: #555;
 }
 
 
@@ -103,6 +101,8 @@ p {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    font-size: 2rem;
+    color: #555;
 }
 
 
