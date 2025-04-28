@@ -54,7 +54,7 @@ jobs:
           publish_dir: ./out
           publish_branch: gh-pages
           force_orphan: true
-          commit_message: "Deploy: $(date '+%Y-%m-%d %H:%M:%S')"
+          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
 
       - name: Finished
         run: |
