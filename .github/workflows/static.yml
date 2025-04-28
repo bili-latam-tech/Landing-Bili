@@ -52,3 +52,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+
+      - name: Finished
+        run: |
+          echo "🚀 Site deployed to: https://bili-latam-tech.github.io/Landing-Bili"
+          echo "::notice::🚀 Site deployed to: https://bili-latam-tech.github.io/Landing-Bili"
