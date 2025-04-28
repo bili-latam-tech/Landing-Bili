@@ -28,14 +28,17 @@ jobs:
           node-version: "20"
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm@8
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build with Next.js
         run: pnpm next build
