@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +8,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundSize: {
+        '200': '200% 200%',
+      },
+      animation: {
+        'gradient-move': 'gradient-move 3s linear infinite',
+      },
+      keyframes: {
+        'gradient-move': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
+      },
       fontFamily: {
         sans: ['var(--font-dm-sans)'],
         poppins: ['var(--font-poppins)'],

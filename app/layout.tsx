@@ -18,6 +18,14 @@ export const metadata: Metadata = {
   title: 'Bili App - Tu aliado financiero',
   description: 'Registra tus gastos, fija metas de ahorro y mejora tu vida financiera con Bili App. Únete a nuestra lista de espera y prueba nuestra versión beta.',
   keywords: 'ahorro, finanzas personales, app, gastos, metas financieras, billetera digital',
+  icons: {
+    icon: [
+      { url: '/logo_website.PNG', type: 'image/png', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -40,7 +48,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-gradient-to-br from-white to-gray-50 min-h-screen">{children}</body>
+      <body className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen text-gray-900 dark:text-gray-100 transition-colors duration-200">
+        {children}
+      </body>
     </html>
   );
 } 
