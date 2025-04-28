@@ -8,15 +8,7 @@ const nextConfig = {
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/Landing-Bili' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Landing-Bili/' : '',
-  trailingSlash: true,
-  // Ensure CSS is properly handled
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
-    });
-    return config;
-  },
+  trailingSlash: true
 }
 
 module.exports = nextConfig 
