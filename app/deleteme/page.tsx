@@ -49,15 +49,45 @@ export default function DeleteAccountPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0A0A0A] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-3xl w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
-            Eliminar Tu Cuenta
+            Eliminar Tu Cuenta en Bili
           </h2>
           <p className="mt-2 text-center text-sm text-gray-400">
-            ¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.
+            Proceso de eliminación de cuenta en Bili
           </p>
         </div>
+
+        <div className="bg-[#1A1A1A] p-6 rounded-lg space-y-4">
+          <h3 className="text-xl font-semibold text-white">Proceso de Eliminación</h3>
+          <ol className="list-decimal list-inside space-y-2 text-gray-300">
+            <li>Ingresa tu correo electrónico asociado a tu cuenta de Bili</li>
+            <li>Proporciona la razón por la que deseas eliminar tu cuenta</li>
+            <li>Haz clic en "Eliminar Mi Cuenta"</li>
+            <li>Recibirás un correo de confirmación</li>
+            <li>Tu cuenta será eliminada permanentemente en un plazo de 30 días</li>
+          </ol>
+        </div>
+
+        <div className="bg-[#1A1A1A] p-6 rounded-lg space-y-4">
+          <h3 className="text-xl font-semibold text-white">Datos que se Eliminarán</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-300">
+            <li>Información personal (nombre, correo electrónico, foto de perfil)</li>
+            <li>Historial de actividad</li>
+            <li>Preferencias y configuraciones</li>
+            <li>Datos de la cuenta</li>
+          </ul>
+        </div>
+
+        <div className="bg-[#1A1A1A] p-6 rounded-lg space-y-4">
+          <h3 className="text-xl font-semibold text-white">Datos que se Conservarán</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-300">
+            <li>Registros de transacciones (por 5 años por requerimientos legales)</li>
+            <li>Registros de actividad sospechosa (por 2 años por seguridad)</li>
+          </ul>
+        </div>
+
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
             <div className="rounded-md bg-red-900/50 p-4">
