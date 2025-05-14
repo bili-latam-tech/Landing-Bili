@@ -38,7 +38,6 @@ export default function DeleteAccountPage() {
         throw new Error('Error al eliminar la cuenta');
       }
 
-      // Redirect to home page after successful deletion
       router.push('/');
     } catch (err) {
       setError('Ocurrió un error al intentar eliminar tu cuenta. Por favor, inténtalo de nuevo.');
